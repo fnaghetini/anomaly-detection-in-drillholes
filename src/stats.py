@@ -1,15 +1,16 @@
 import pandas as pd
 
 
-def get_summary_table(table: pd.DataFrame()) -> pd.DataFrame():
+def get_summary_table(table: pd.DataFrame) -> pd.DataFrame:
     datadict = pd.DataFrame(table.dtypes, columns=['dType'])
     datadict["Valores Faltantes"] = table.isnull().sum()
     datadict["Valores Preenchidos"] = table.notnull().sum()
+    datadict["% Valores Preenchidos"] = datadict["Valores Preenchidos"] / (datadict["Valores Preenchidos"] + datadict["Valores Faltantes"])
     datadict["Valores Únicos"] = table.nunique()
     return datadict
 
 
-def calculate_stats_table(df: pd.DataFrame()) -> pd.DataFrame():
+def calculate_stats_table(df: pd.DataFrame) -> pd.DataFrame:
     stats = df.describe(percentiles=[0.1, 0.5, 0.995]).T
     stats['Amp'] = (df.max() - df.min()).tolist()  # amplitude (max = min)
     stats['S²'] = df.var().tolist()  # variância
