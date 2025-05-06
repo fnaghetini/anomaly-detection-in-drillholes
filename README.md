@@ -4,7 +4,7 @@
 
 # DETECÇÃO DE DESCRIÇÕES LITOLÓGICAS ANÔMALAS UTILIZANDO ISOLATION FOREST: UM ESTUDO DE CASO EM MINA DE FOSFATO
 
-**Notebook complementar ao artigo do CBMina 2025**
+**Repositório complementar ao artigo do CBMina 2025**
 
 Autores: [Franco Naghetini](www.linkedin.com/in/fnaghetini); [Diego Marques](https://www.linkedin.com/in/diego-machado-marques-7336852b/); [Fernanda Niquini](https://www.linkedin.com/in/fernanda-gontijo-fernandes-niquini-0a6a7698/)
 
